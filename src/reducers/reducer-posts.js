@@ -3,7 +3,7 @@ import { FETCH_POSTS, FETCH_POST } from '../actions';
 
 export default function(state = {}, action) {
   switch(action.type) {
-  case FETCH_POSTS:
+  case FETCH_POST:
     const post = action.payload.data;
     // key interpolation, not creating an array!!! see comment below (ES5 example);
     return { ...state, [action.payload.data.id]: action.payload.data };
